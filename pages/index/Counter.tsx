@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+export { Counter }
 
-export function Counter() {
-  const [count, setCount] = useState(0);
+import React, { useState } from 'react'
+import { Button } from '@chakra-ui/react'
 
+function Counter() {
+  const [count, setCount] = useState(0)
   return (
-    <button type="button" onClick={() => setCount((count) => count + 1)}>
+    <Button size="sm" colorPalette="teal" onClick={() => setCount((count) => count + 1)}>
       Counter {count}
-    </button>
-  );
+    </Button>
+  )
 }

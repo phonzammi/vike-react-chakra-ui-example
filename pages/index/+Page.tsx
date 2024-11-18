@@ -1,17 +1,22 @@
-import React from "react";
-import { Counter } from "./Counter.js";
+export default Page
 
-export default function Page() {
+import React from 'react'
+import { Counter } from './Counter'
+import { Heading, List, Text } from '@chakra-ui/react'
+
+function Page() {
   return (
     <>
-      <h1>My Vike app</h1>
-      This page is:
-      <ul>
-        <li>Rendered to HTML.</li>
-        <li>
+      <Heading display="block" fontSize="2em" marginBlock="0.67em" fontWeight="bold">
+        My Vike + React app
+      </Heading>
+      <Text marginBlock="2">This page is:</Text>
+      <List.Root>
+        <List.Item>Rendered to HTML.</List.Item>
+        <List.Item>
           Interactive. <Counter />
-        </li>
-      </ul>
+        </List.Item>
+      </List.Root>
     </>
-  );
+  )
 }
